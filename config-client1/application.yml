@@ -1,0 +1,17 @@
+server:
+  port: 4040
+  
+  
+spring:
+  application:
+    name: config-client1
+  config:
+    import: configserver:http://localhost:8888
+        
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"
